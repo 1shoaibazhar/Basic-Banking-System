@@ -19,10 +19,10 @@ const mongodbURL = String(process.env.MONGO_URL);
 mongoose
   .connect(mongodbURL)
   .then(() => {
-    console.log("Database connected");
+    console.log("Database is connected");
   })
   .catch((err) => {
-    console.log("Database not connected");
+    console.log("Database is not connected");
     console.log(err);
   });
 
