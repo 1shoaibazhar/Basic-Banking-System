@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icon.jpg">
+    <style>
+      .menu-bar{
+        background-image: linear-gradient(-90deg, #1252d3, #a83279);
+      }
+
+      .custom-btn{
+        box-shadow: 0 4px 8px 0 rgb(9, 97, 228), 0 6px 20px 0 rgb(117, 8, 233)!important;
+      }
+      .custom-btn:hover{
+        background-color: #3234a8;;
+        color: white;
+      }
+
+      .nav-link{
+        font-size: 20px;
+        margin: 5px;
+        color: white!important;
+        font-weight: 500;
+      }
+
+      .navbar-nav{
+        text-align: right;
+        margin-right: 20px;
+      }
+
+      .menu-bar .navbar-toggler{
+        padding-right: 20px;
+        outline: none!important;
+        border: none!important;
+      }
+
+      .navbar .fa{
+        color: #ffff;
+        font-size: 26px;
+      }
+
+      .nav-link:hover{
+        font-weight: 600;
+        border-bottom: 1px solid white;
+      }
+    	.image{
+ 			 border-radius: 8px;
+ 			 box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+	  	}
+      .favicon{
+        border-radius: 50px;
+        box-shadow: 0 4px 8px 0 rgb(228, 9, 9), 0 6px 20px 0 rgb(233, 8, 8)!important;
+      }
+      body{
+        background-image: linear-gradient(#3F8FD5 ,#026AC6, #02213D);  /*#287A75*/;
+        max-width: 100%;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      
+      .h1{
+      	text-shadow: 2px 2px 4px #000000;
+      }
+      .heading{
+        margin-top: 38px;
+        color: white;
+        font-weight: 900;
+      }
+      p{
+        max-width: 800px;
+        text-align: center;
+        margin: auto;
+        color: white;
+        font-size: 15px;
+      }
+      #col1 img{
+        max-width: 250px;
+      }
+      #col2 img{
+        max-width: 250px;
+      }
+      #col3 img{
+        max-width: 250px;
+      }
+      .pictures{
+        margin-top: 70px;
+        margin-bottom: 70px;
+      }
+      .btn{
+        width: 220px;
+        font-size: 25px;
+      }
+      .buttons{
+        margin-top: 58.5px;
+        margin-bottom: 58.5px;
+      }
+    </style>
+  </head>
+
+<body>
+<div>
+    <div class="header">
+      <div class="menu-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img class="favicon" src="navbaricon.png" alt="Icon" width="50" height="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars "></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/transfer">Transfer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/transactions">All Transactions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+      
+      <div id="headline" class="d-flex justify-content-center heading">
+        <h1 class="h1">Welcome to Basic Banking System</h1>
+      </div>
+      <p>Manage your finances right away with a few clicks</p>
+      <p>Banking Experience, Anytime, Anywhere!</p>
+      
+    </div>
+    <!-- Pictures -->
+    <div class="row d-flex justify-content-center mt-5 p-4 mb-5 pictures">
+      <div id="col1" class="col-md-3">
+        <img  class="image" src="333.jpeg">
+      </div>
+      <div id="col2" class="col-md-3">
+       <img class="image" src="111.jpg">
+      </div>
+      <div id="col3" class="col-md-3">
+        <img class="image" src="222.jpg">
+      </div>
+    </div>
+
+
+    <!-- buttons -->
+    <div class="buttons row d-flex justify-content-center">
+      <div class="col-md-2 me-3">
+        <a href="/transfer">
+        <button type="button" class="btn btn-light custom-btn" style="font-family: fantasy;">Customers</button>
+      </a>
+      </div>
+      <div class="col-md-2 ">
+        <a href="/transactions">
+        <button type="button" class="btn btn-light custom-btn" style="font-family: fantasy;">Transactions</button>
+      </a>
+      </div>
+    </div>
+
+</body>
+</html>

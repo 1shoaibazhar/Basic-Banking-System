@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icon.jpg">
+
+    <style>
+      body{
+       background-color: #026AC6;
+       max-width: 100%;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      .menu-bar{
+        background-image: linear-gradient(-90deg, #1252d3, #a83279);
+      }
+
+      .nav-link{
+        font-size: 20px;
+        margin: 5px;
+        color: white!important;
+        font-weight: 500;
+      }
+
+      .navbar-nav{
+        text-align: right;
+        margin-right: 20px;
+      }
+
+      .menu-bar .navbar-toggler{
+        padding-right: 20px;
+        outline: none!important;
+        border: none!important;
+      }
+
+      .navbar .fa{
+        color: #ffff;
+        font-size: 26px;
+
+      }
+      img {
+ 			 border-radius: 8px;
+ 			 box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+		  }
+      .favicon{
+        border-radius: 50px;
+        box-shadow: 0 4px 8px 0 rgb(228, 9, 9), 0 6px 20px 0 rgb(233, 8, 8)!important;
+      }
+
+      .nav-link:hover{
+        font-weight: 600;
+        border-bottom: 1px solid white;
+      }
+
+      .table{
+        margin-top: 60px !important;
+        padding: 5px;
+        max-width: 900px;
+        margin: auto;
+      }
+      .table{
+      	border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #02213D; 
+      }
+.table tr:nth-child(even){background-color: #f2f2f2;}
+
+.table td:hover {background-color: #ddd;}
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2B2B2B;
+  color: white;
+}
+.table td, .table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+ #grad1 {
+  height: 640px;
+  background-color: #026AC6; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#3F8FD5 ,#026AC6, #02213D);
+}
+      
+    </style>
+  </head>
+<body id="grad1">
+    <div class="header">
+      <div class="menu-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img class="favicon" src="navbaricon.png" alt="Icon" width="50" height="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars "></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/transfer">Transfer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/transactions">All Transactions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col">
+      <table class="table table-light">
+        <thead>
+          <tr>
+            <th scope="col">Sr No</th>
+            <th scope="col">Transaction Id</th>
+            <th scope="col">Sender Name</th>
+            <th scope="col">Receiver Name</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (transactionValues.length > 0) { %>
+          <% for (let i=0; i< transactionValues.length ; i++) { %>
+              <tr>
+              <th scope="row"><%= i+1 %></th>
+              <td><%= transactionValues[i]._id %></td>
+              <td><%= transactionValues[i].Sender %></td>
+              <td><%= transactionValues[i].Reciever %></td>
+              <td><%= transactionValues[i].Amount %></td>
+              </tr>
+            <% } %>  
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+      
+
+</body>
+</html>
