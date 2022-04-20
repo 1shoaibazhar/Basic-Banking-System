@@ -35,25 +35,30 @@ app.get("/", (req, res) => {
       });
      
     // Loading customer data
-      let allcustomers = [{
-        Name: "Shoaib",
-        Email: "shoaib@gmail.com",
-        Balance:  999999
-      }, {
-        Name: "Anna",
-        Email: "anna@outlook.com",
-        Balance:  999999
-      }, {
-        Name: "Amir",
-        Email: "amir@gmail.com",
-        Balance:  999999
-      }, {Name: "Usman",
-      Email: "usman@yahoo.com",
-      Balance:  999999
-    },{Name: "Jack",
-        Email: "jack@yahoo.com",
-        Balance:  999999
-        }]
+      let allcustomers = [
+        {
+          Name: "Shoaib",
+          Email: "shoaib@gmail.com",
+          Balance: 960000,
+        },
+        {
+          Name: "Anna",
+          Email: "anna@outlook.com",
+          Balance: 7810000,
+        },
+        {
+          Name: "Amir",
+          Email: "amir@gmail.com",
+          Balance: 910000,
+        },
+        { Name: "Usman", Email: "usman@yahoo.com", Balance: 990000 },
+        { Name: "Jack", Email: "jack@yahoo.com", Balance: 468000 },
+        { Name: "Hafeez", Email: "hafeez@yahoo.com", Balance: 485000 },
+        { Name: "Mike", Email: "mike@hotmail.com", Balance: 960000 },
+        { Name: "Richards", Email: "richards@yahoo.com", Balance: 320000 },
+        { Name: "Gomez", Email: "gomez@gmail.com", Balance: 11256777 },
+        { Name: "Shahzaib", Email: "shahzaib@gmail.com", Balance: 11256777 },
+      ];
     allcustomers.forEach(customer_data =>{
         let myData = new customer(customer_data);
         myData.save(function(err,customer){
