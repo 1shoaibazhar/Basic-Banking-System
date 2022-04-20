@@ -3,10 +3,11 @@ const path = require("path");
 const app = express();
 const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 // Linking the mongoose schema with the app.js file
 const customer = require("./models/customers");
-const transferTable = require("./models/transfers")
+const transferTable = require("./models/transfers");
 
 const port = process.env.PORT || 3000;
 // START THE SERVER
@@ -14,17 +15,16 @@ app.listen(port, () => {
   console.log(`The application started successfully on port ${port}`);
 });
 
-
-const MONGODB_URI =
-  process.env.MONGODB_URL || "mongodb://localhost:27017/BasicBankingSystem";
-const options = {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-  family: 4, // Use IPv4, skip trying IPv6
-};
-
-mongoose.connect(mongoose.connect(MONGODB_URI, options));
+const mongodbURL = String(process.env.MONGO_URL);
+mongoose
+  .connect(mongodbURL)
+  .then(() => {
+    console.log("Database connected");
+  })
+  .catch((err) => {
+    console.log("Database not connected");
+    console.log(err);
+  });
 
 // Setting view engine as ejs
 app.set("view engine", "ejs");

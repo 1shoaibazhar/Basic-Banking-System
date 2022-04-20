@@ -10,6 +10,6 @@ const transferTableSchema = new mongoose.Schema({
 });
 
 // Model
-const transferTable = mongoose.model("tranferTable", transferTableSchema);
+const transferTable = mongoose.model("transferTable", transferTableSchema);
 module.exports = transferTable
 
