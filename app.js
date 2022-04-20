@@ -14,7 +14,17 @@ app.listen(port, () => {
   console.log(`The application started successfully on port ${port}`);
 });
 
-// mongoose.connect("mongodb://localhost:27017/BasicBankingSystem");
+
+const MONGODB_URI =
+  process.env.MONGODB_URL || "mongodb://localhost:27017/BasicBankingSystem";
+const options = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+  family: 4, // Use IPv4, skip trying IPv6
+};
+
+mongoose.connect(mongoose.connect(MONGODB_URI, options));
 
 // Setting view engine as ejs
 app.set("view engine", "ejs");
