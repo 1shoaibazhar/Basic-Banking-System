@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const customer = require("./models/customers");
 const transferTable = require("./models/transfers")
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 // START THE SERVER
 app.listen(port, () => {
   console.log(`The application started successfully on port ${port}`);
