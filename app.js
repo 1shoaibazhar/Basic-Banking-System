@@ -14,7 +14,7 @@ app.listen(port, () => {
   console.log(`The application started successfully on port ${port}`);
 });
 
-mongoose.connect("mongodb://localhost:27017/BasicBankingSystem");
+// mongoose.connect("mongodb://localhost:27017/BasicBankingSystem");
 
 // Setting view engine as ejs
 app.set("view engine", "ejs");
